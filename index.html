@@ -399,6 +399,61 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
   0%,100% { transform: rotate(-20deg); }
   50%      { transform: rotate(20deg); }
 }
+
+/* --- v2: compounding story, card narratives, Claude section, cat asides --- */
+.hero-thesis{font-family:'Nunito',sans-serif;font-size:17px;font-weight:600;color:var(--text);margin:-0.5rem 0 1rem;animation:fadeUp .7s .25s both;}
+.hero-thesis span{color:var(--accent);}
+.act-lesson{margin-top:.6rem;font-size:13px;color:var(--accent);font-weight:600;line-height:1.6;}
+.act-lesson::before{content:"\2192  ";}
+.pstory{display:grid;grid-template-columns:64px 1fr;gap:.45rem .75rem;margin-bottom:1rem;font-size:13px;line-height:1.7;color:var(--text-2);}
+.pstory dt{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);padding-top:.2rem;}
+.pstory dd{margin:0;}
+.ledto{margin-top:.875rem;padding:10px 12px;border-radius:var(--r-sm);font-size:12.5px;line-height:1.65;background:var(--accent-bg);border-left:3px solid var(--accent);color:var(--text-2);}
+.ledto strong{color:var(--accent);}
+.cl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:2rem;}
+.cl-quote{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.25rem 1.25rem 1.1rem;position:relative;}
+.cl-quote h3{font-family:'Nunito',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin:0 0 .5rem;}
+.cl-quote p{font-size:13px;line-height:1.75;color:var(--text-2);margin:0;}
+@media(min-width:769px){.pcard.featured{grid-column:1/-1;}}
+.cl-quote.growing{border-style:dashed;grid-column:1/-1;}
+.cl-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border:1px solid var(--accent-bg2);padding:3px 9px;border-radius:999px;margin-bottom:.75rem;}
+.cl-badge i{width:7px;height:7px;border-radius:50%;background:#d97757;display:inline-block;}
+.guide{margin-top:2.5rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.5rem;}
+.guide h3{font-family:'Nunito',sans-serif;font-size:18px;font-weight:700;margin:0 0 1rem;color:var(--text);}
+.guide ol{margin:0;padding:0;list-style:none;counter-reset:g;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.9rem 2rem;}
+.guide li{counter-increment:g;font-size:13px;line-height:1.7;color:var(--text-2);padding-left:2.1rem;position:relative;}
+.guide li::before{content:counter(g,decimal-leading-zero);position:absolute;left:0;top:0;font-family:'Nunito',sans-serif;font-weight:700;color:var(--accent);}
+.guide li strong{color:var(--text);display:block;}
+.cl-sign{margin-top:1rem;font-size:12px;color:var(--text-3);font-style:italic;}
+.built{margin-top:2.5rem;}
+.built h3{font-family:'Nunito',sans-serif;font-size:18px;font-weight:700;margin:0 0 .35rem;color:var(--text);}
+.built > p{font-size:13px;color:var(--text-3);margin:0 0 1rem;}
+.built-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+.btile{background:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--r-md);padding:1rem 1.1rem;}
+.btile .bt-ic{font-size:20px;margin-bottom:.4rem;}
+.btile .bt-t{font-weight:600;font-size:14px;color:var(--text);margin-bottom:.25rem;}
+.btile .bt-d{font-size:12.5px;line-height:1.65;color:var(--text-2);}
+.cat-aside{display:flex;align-items:center;gap:10px;max-width:520px;margin:1.75rem 0 0 auto;font-size:13px;color:var(--text-2);font-style:italic;}
+.cat-aside .bubble{background:var(--surface);border:1px solid var(--border-md);border-radius:16px 16px 4px 16px;padding:8px 14px;line-height:1.55;}
+.cat-aside .cat-ic{font-size:22px;flex-shrink:0;}
+@media(max-width:768px){.pstory{grid-template-columns:1fr;gap:.1rem;}.pstory dd{margin-bottom:.4rem;}.cat-aside{margin-left:0;}}
+
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2rem;}
+.duo-col{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.4rem;}
+.duo-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:1rem;padding-bottom:.9rem;border-bottom:1px solid var(--border);}
+.duo-head .cl-badge{margin:0;}
+.duo-head span.ctx{font-size:12px;color:var(--text-3);}
+.cl-badge.rovo i{background:#1d7afc;}
+.duo-item{margin-bottom:1rem;}
+.duo-item:last-child{margin-bottom:0;}
+.duo-item h3{font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;color:var(--text);margin:0 0 .25rem;}
+.duo-item p{font-size:13px;line-height:1.7;color:var(--text-2);margin:0;}
+.agree{margin-top:1.25rem;display:grid;grid-template-columns:auto 1fr;gap:1rem 1.25rem;align-items:center;background:var(--accent-bg);border:1px solid var(--accent-bg2);border-radius:var(--r-lg);padding:1.1rem 1.4rem;}
+.agree .ag-lbl{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);}
+.agree p{margin:0;font-size:14px;line-height:1.7;color:var(--text);}
+.growing-note{margin-top:1.25rem;border:1px dashed var(--border-md);border-radius:var(--r-lg);padding:1.1rem 1.4rem;font-size:13px;line-height:1.7;color:var(--text-2);}
+.growing-note strong{color:var(--text);}
+@media(max-width:768px){.duo{grid-template-columns:1fr;}.agree{grid-template-columns:1fr;gap:.35rem;}}
 </style>
 </head>
 <body>
@@ -408,7 +463,7 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
   <a href="#" class="nav-logo" id="navLogo">Parvati Ramachandran <span class="nav-cat" id="navCat" title="Click 3x" style="font-size:11px;opacity:0.5;cursor:pointer;"></span></a>
   <div class="nav-right">
     <ul class="nav-links">
-      <li><a href="#story">Story</a></li><li><a href="#ai">AI Work</a></li><li><a href="#workshops">Workshops</a></li><li><a href="#writing">Writing</a></li><li><a href="#education">Education</a></li><li><a href="#skills">Skills</a></li><li><a href="#art">Art</a></li><li><a href="#contact">Contact</a></li>
+      <li><a href="#story">Story</a></li><li><a href="#ai">AI Work</a></li><li><a href="#how">How I Work</a></li><li><a href="#workshops">Workshops</a></li><li><a href="#writing">Writing</a></li><li><a href="#education">Education</a></li><li><a href="#skills">Skills</a></li><li><a href="#art">Art</a></li><li><a href="#contact">Contact</a></li>
     </ul>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><div class="theme-thumb" id="themeThumb">&#9728;&#65039;</div></button>
   </div>
@@ -420,11 +475,12 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
       <div class="hero-tag"><span class="hero-dot"></span>Product Director &middot; AI Strategy</div>
       <h1>Building products<br>that make <em>hard tech</em><br>feel human.</h1>
       <p class="hero-tagline">Product specialist by day, cat servant by night,<br>forever a champion of women in tech.</p>
-      <p class="hero-sub">Currently leading AI product strategy at <strong>Adform</strong> &mdash; architecting GenAI agents, managing Data Scientists, and turning complex technology into experiences people actually want to use. Across <strong>AdTech, EdTech, FinTech &amp; HR Tech.</strong></p>
+      <p class="hero-thesis">I build things that <span>compound</span> &mdash; every product becomes the foundation for the next.</p>
+      <p class="hero-sub">Currently leading AI product strategy at <strong>Adform</strong> &mdash; architecting GenAI agents, leading a team of Data Scientists, and turning complex technology into experiences people actually want to use. Across <strong>AdTech, EdTech, FinTech &amp; HR Tech.</strong></p>
       <div class="hero-stats">
-        <div class="h-stat"><span class="h-num" id="expCtr">12+</span><div class="h-lbl">Years experience</div></div>
-        <div class="h-stat"><span class="h-num">$14M</span><div class="h-lbl">Revenue generated</div></div>
-        <div class="h-stat"><span class="h-num">5</span><div class="h-lbl">AI products shipped</div></div>
+        <div class="h-stat"><span class="h-num">1&rarr;5</span><div class="h-lbl">AI agents on one framework</div></div>
+        <div class="h-stat"><span class="h-num">76%</span><div class="h-lbl">AI recommendation conversion</div></div>
+        <div class="h-stat"><span class="h-num">Lead</span><div class="h-lbl">of Adform&rsquo;s data science team</div></div>
       </div>
       <div class="hero-cta">
         <a href="#ai" class="btn-p">View AI Work ↓</a>
@@ -491,8 +547,8 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
     <div style="display:grid;grid-template-columns:1fr 260px;gap:3rem;align-items:center;margin-bottom:2.5rem;">
       <div>
         <div class="sec-lbl reveal">The real story</div>
-        <h2 class="sec-h2 reveal">From writing code to directing AI.</h2>
-        <p class="sec-intro reveal" style="margin-bottom:0;">Four acts, twelve years, a lot of hats &mdash; one throughline: making technology feel human.</p>
+        <h2 class="sec-h2 reveal">From writing code to building things that compound.</h2>
+        <p class="sec-intro reveal" style="margin-bottom:0;">Four acts, more than a decade, a lot of hats &mdash; and each act taught me something the next one needed.</p>
       </div>
       <div class="reveal" style="display:flex;justify-content:center;align-items:center;">
         <svg id="cat-biscuits" width="220" height="200" viewBox="0 0 220 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -552,10 +608,10 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
       </div>
     </div>
     <div class="acts">
-      <div class="act"><div><div class="act-period">2011&ndash;2015</div><div class="act-co">Infosys &middot; JM Financial</div></div><div><div class="act-role">The engineer who didn&rsquo;t want to be an engineer forever</div><div class="act-body">Started writing code at Infosys. Two years in, I knew development wasn&rsquo;t my forever. Pivoted to an MBA in Finance &mdash; then discovered finance isn&rsquo;t just numbers, it&rsquo;s stocks, derivatives, and a lot of uncertainty. Time to return to tech, but differently.</div><div class="act-tags"><span class="tag">Engineering</span><span class="tag">FinTech</span><span class="tag">MBA</span></div></div></div>
-      <div class="act"><div><div class="act-period">2015&ndash;2019</div><div class="act-co">Mastek &middot; Lucida &middot; Quantiphi</div></div><div><div class="act-role">The startup bug bites</div><div class="act-body">Solid FinTech BA work at Mastek, great foundations. But India&rsquo;s startup boom was happening all around me. I wanted to be a bigger fish in a smaller pond. A couple of failed attempts later &mdash; MNC-to-startup culture is a real gear shift &mdash; I landed at Quantiphi, just as they needed someone to own an EdTech product roadmap from scratch.</div><div class="act-tags"><span class="tag">BA</span><span class="tag">Agile</span><span class="tag">Zero-to-one</span></div></div></div>
-      <div class="act"><div><div class="act-period">2019&ndash;2023</div><div class="act-co">iSchoolConnect</div></div><div><div class="act-role">iSchoolConnect &mdash; building everything from scratch</div><div class="act-body">7&ndash;8 months in, we demerged from Quantiphi and became iSchoolConnect. I was there from day one &mdash; building product, teams, culture, wearing every hat. Four years of zero-to-one teaches you things no MBA can. But eventually I&rsquo;d mastered that. What I hadn&rsquo;t learnt was how to scale beyond it.</div><div class="act-tags"><span class="tag">Head of Product</span><span class="tag">AI Proctoring</span><span class="tag">$14M Revenue</span></div></div></div>
-      <div class="act"><div><div class="act-period">2023&ndash;Now</div><div class="act-co">Adform</div></div><div><div class="act-role">Adform &mdash; startup hustle meets enterprise structure</div><div class="act-body">Adform has startup energy with real processes &mdash; exactly what I needed. Built the Mumbai PM team from scratch, then promoted to lead AI product strategy. Managing Data Scientists, architecting GenAI agents, presenting roadmaps to C-suite across three continents. Scaling beyond one is a very different skill. I love it.</div><div class="act-tags"><span class="tag">GenAI</span><span class="tag">MCP</span><span class="tag">Global Teams</span><span class="tag">Director</span></div></div></div>
+      <div class="act"><div><div class="act-period">2011&ndash;2015</div><div class="act-co">Infosys &middot; JM Financial</div></div><div><div class="act-role">The engineer who didn&rsquo;t want to be an engineer forever</div><div class="act-body">Started writing code at Infosys. Two years in, I knew development wasn&rsquo;t my forever. Pivoted to an MBA in Finance &mdash; then discovered finance isn&rsquo;t just numbers, it&rsquo;s stocks, derivatives, and a lot of uncertainty. Time to return to tech, but differently.</div><div class="act-lesson">I&rsquo;d rather shape technology than only write it.</div><div class="act-tags"><span class="tag">Engineering</span><span class="tag">FinTech</span><span class="tag">MBA</span></div></div></div>
+      <div class="act"><div><div class="act-period">2015&ndash;2019</div><div class="act-co">Mastek &middot; Lucida &middot; Quantiphi</div></div><div><div class="act-role">The startup bug bites</div><div class="act-body">Solid FinTech BA work at Mastek, great foundations. But India&rsquo;s startup boom was happening all around me. I wanted to be a bigger fish in a smaller pond. A couple of failed attempts later &mdash; MNC-to-startup culture is a real gear shift &mdash; I landed at Quantiphi, just as they needed someone to own an EdTech product roadmap from scratch.</div><div class="act-lesson">Choose the pond where you can actually make waves.</div><div class="act-tags"><span class="tag">BA</span><span class="tag">Agile</span><span class="tag">Zero-to-one</span></div></div></div>
+      <div class="act"><div><div class="act-period">2019&ndash;2023</div><div class="act-co">iSchoolConnect</div></div><div><div class="act-role">iSchoolConnect &mdash; building everything from scratch</div><div class="act-body">7&ndash;8 months in, we demerged from Quantiphi and became iSchoolConnect. I was there from day one &mdash; building product, teams, culture, wearing every hat. Four years of zero-to-one teaches you things no MBA can. But eventually I&rsquo;d mastered that. What I hadn&rsquo;t learnt was how to scale beyond it.</div><div class="act-lesson">Build things that outlive their first use &mdash; the models behind one feature went on to power our AI proctoring.</div><div class="act-tags"><span class="tag">Head of Product</span><span class="tag">AI Proctoring</span><span class="tag">Built to be reused</span></div></div></div>
+      <div class="act"><div><div class="act-period">2023&ndash;Now</div><div class="act-co">Adform</div></div><div><div class="act-role">Adform &mdash; startup hustle meets enterprise structure</div><div class="act-body">Adform has startup energy with real processes &mdash; exactly what I needed. Built the Mumbai PM team from scratch, then promoted to lead AI product strategy. Managing Data Scientists, architecting GenAI agents, presenting roadmaps to C-suite across three continents. Scaling beyond one is a very different skill. I love it.</div><div class="act-lesson">Build the platform, not just the feature &mdash; and the team systems around it.</div><div class="act-tags"><span class="tag">GenAI</span><span class="tag">MCP</span><span class="tag">Agent Platforms</span><span class="tag">Global Teams</span><span class="tag">Director</span></div></div></div>
     </div>
   </div>
 </section>
@@ -662,18 +718,70 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
         </svg>
       </div>
     </div>
-    <p class="sec-intro reveal">Shipping AI before it was fashionable &mdash; from computer vision tools built 6 years ahead of the market, to GenAI agents in production today.</p>
+    <p class="sec-intro reveal">Shipping AI before it was fashionable &mdash; and notice how each story ends with an arrow. That&rsquo;s the compounding bit.</p>
     <div class="pgrid stagger">
-      <div class="pcard"><div class="ptop"><div class="brow"><span class="b b-co">iSchoolConnect &middot; ~2019</span><span class="b b-new">6 yrs ahead of market</span></div><div class="ptitle">Video Interview Analyser (VIA)</div><div class="pmeta">Computer Vision &middot; NLP &middot; Visa Interview Prep</div></div><div class="pbody"><p class="pdesc">Built years before AI interview tools like Leap existed. Students practised visa interviews and received deep objective analysis &mdash; confidence, eye contact, filler words, pauses &mdash; previously only possible with a human counsellor.</p><div class="chips"><span class="chip">Confidence scoring</span><span class="chip">Eye contact tracking</span><span class="chip">Filler word detection</span><span class="chip">Pause analysis</span></div><div class="callout c-amber"><strong>The pivot that paid off:</strong> CV models built for VIA were repurposed into AI Proctoring during Covid &mdash; directly generating $14M revenue.</div></div></div>
-      <div class="pcard"><div class="ptop"><div class="brow"><span class="b b-co">iSchoolConnect &middot; 2021</span></div><div class="ptitle">AI Fraud Detection &amp; Proctoring</div><div class="pmeta">Computer Vision &middot; Behavioural AI &middot; B2B SaaS</div></div><div class="pbody"><p class="pdesc">AI-based proctoring for high-stakes international student exams during Covid. Championed B2C-grade UX within a B2B security product to minimise stress for students in already-difficult conditions.</p><div class="chips"><span class="chip">Real-time fraud detection</span><span class="chip">Behavioural analysis</span><span class="chip">Human-grade UX</span></div><div class="mets"><div class="met"><span class="mnum">$14M</span><div class="mlbl">USD revenue</div></div><div class="met"><span class="mnum">CV Models</span><div class="mlbl">reused from VIA</div></div></div></div></div>
-      <div class="pcard"><div class="ptop"><div class="brow"><span class="b b-co">iSchoolConnect</span><span class="b b-hitl">Human-in-the-loop</span></div><div class="ptitle">University &amp; Course Recommendation</div><div class="pmeta">ML &middot; Recommendation Engine &middot; Counsellor Tools</div></div><div class="pbody"><p class="pdesc">Personalised ML engine matching students to universities based on full profile. Counsellors and students shared a single live view, replacing manual Excel. Counsellor overrides fed back as training signal.</p><div class="chips"><span class="chip">Profile-driven matching</span><span class="chip">Shared counsellor view</span><span class="chip">Excel &rarr; automated</span></div><div class="callout c-blue"><strong>HITL design:</strong> Counsellor overrides structured as training signal &mdash; continuously improving the model from expert judgment.</div></div></div>
-      <div class="pcard"><div class="ptop"><div class="brow"><span class="b b-co">Adform &middot; 2024</span><span class="b b-new">Live in production</span></div><div class="ptitle">GenAI Audience Discovery Agent</div><div class="pmeta">LLM &middot; Conversational AI &middot; AdTech</div></div><div class="pbody"><p class="pdesc">Conversational AI agent recommending audience segments to media planners. Transformed complex backend targeting logic into a simple chat interface &mdash; personally mapped all user flows for non-technical users.</p><div class="chips"><span class="chip">Conversational UX</span><span class="chip">Audience segmentation</span><span class="chip">C-level adoption</span></div><div class="mets"><div class="met"><span class="mnum">76%</span><div class="mlbl">recommendation conversion</div></div><div class="met"><span class="mnum">23%</span><div class="mlbl">plan-save rate</div></div></div></div></div>
-      <div class="pcard"><div class="ptop"><div class="brow"><span class="b b-co">Adform &middot; 2025</span><span class="b b-wip">In progress</span></div><div class="ptitle">Campaign Search &amp; Filter Agent (MCP)</div><div class="pmeta">Model Context Protocol &middot; Agentic AI</div></div><div class="pbody"><p class="pdesc">Architecting an MCP-based agent framework for natural language search and filtering across campaign data &mdash; establishing the foundational Agent Framework for rapid deployment of future autonomous agents.</p><div class="chips"><span class="chip">Model Context Protocol</span><span class="chip">Autonomous agents</span><span class="chip">Platform architecture</span></div><div class="mets"><div class="met"><span class="mnum">Foundation</span><div class="mlbl">for all future agents</div></div><div class="met"><span class="mnum">MCP</span><div class="mlbl">cutting-edge protocol</div></div></div></div></div>
+      <div class="pcard"><div class="ptop"><div class="brow"><span class="b b-co">iSchoolConnect &middot; ~2019</span><span class="b b-new">6 yrs ahead of market</span></div><div class="ptitle">Video Interview Analyser (VIA)</div><div class="pmeta">Computer Vision &middot; NLP &middot; Visa Interview Prep</div></div><div class="pbody"><dl class="pstory"><dt>Problem</dt><dd>Good visa-interview feedback depended on a human counsellor&rsquo;s time.</dd><dt>My bet</dt><dd>Computer vision and NLP could give objective feedback at scale &mdash; years before tools like Leap existed.</dd><dt>Built</dt><dd>Practice interviews scored on confidence, eye contact, filler words and pauses.</dd></dl><div class="chips"><span class="chip">Confidence scoring</span><span class="chip">Eye contact tracking</span><span class="chip">Filler word detection</span><span class="chip">Pause analysis</span></div><div class="ledto"><strong>Led to &rarr;</strong> the same CV models were repurposed into AI proctoring when Covid hit.</div></div></div>
+      <div class="pcard"><div class="ptop"><div class="brow"><span class="b b-co">iSchoolConnect &middot; 2021</span></div><div class="ptitle">AI Fraud Detection &amp; Proctoring</div><div class="pmeta">Computer Vision &middot; Behavioural AI &middot; B2B SaaS</div></div><div class="pbody"><dl class="pstory"><dt>Problem</dt><dd>High-stakes international exams moved online almost overnight during Covid.</dd><dt>My bet</dt><dd>Security doesn&rsquo;t have to feel hostile &mdash; B2C-grade UX inside a B2B security product.</dd><dt>Built</dt><dd>Real-time fraud detection and behavioural analysis, built on models reused from VIA.</dd></dl><div class="chips"><span class="chip">Real-time fraud detection</span><span class="chip">Behavioural analysis</span><span class="chip">Human-grade UX</span></div><div class="mets"><div class="met"><span class="mnum">$14M</span><div class="mlbl">USD revenue</div></div><div class="met"><span class="mnum">CV Models</span><div class="mlbl">reused from VIA</div></div></div></div></div>
+      <div class="pcard"><div class="ptop"><div class="brow"><span class="b b-co">iSchoolConnect</span><span class="b b-hitl">Human-in-the-loop</span></div><div class="ptitle">University &amp; Course Recommendation</div><div class="pmeta">ML &middot; Recommendation Engine &middot; Counsellor Tools</div></div><div class="pbody"><dl class="pstory"><dt>Problem</dt><dd>Counsellors matched students to universities by hand, in Excel.</dd><dt>My bet</dt><dd>One live view shared by counsellors and students, with a human in the loop.</dd><dt>Built</dt><dd>A profile-driven ML matching engine with counsellor tools on top.</dd></dl><div class="chips"><span class="chip">Profile-driven matching</span><span class="chip">Shared counsellor view</span><span class="chip">Excel &rarr; automated</span></div><div class="ledto"><strong>Led to &rarr;</strong> counsellor overrides became training signal, so the model kept learning from expert judgment.</div></div></div>
+      <div class="pcard"><div class="ptop"><div class="brow"><span class="b b-co">Adform &middot; 2024</span><span class="b b-new">Live in production</span></div><div class="ptitle">GenAI Audience Discovery Agent</div><div class="pmeta">LLM &middot; Conversational AI &middot; AdTech</div></div><div class="pbody"><dl class="pstory"><dt>Problem</dt><dd>Audience targeting logic was too complex for many media planners.</dd><dt>My bet</dt><dd>A conversation could hide the complexity without hiding the power.</dd><dt>Built</dt><dd>A chat agent that recommends audience segments &mdash; I personally mapped every user flow for non-technical users.</dd></dl><div class="chips"><span class="chip">Conversational UX</span><span class="chip">Audience segmentation</span><span class="chip">C-level adoption</span></div><div class="mets"><div class="met"><span class="mnum">76%</span><div class="mlbl">recommendation conversion</div></div><div class="met"><span class="mnum">23%</span><div class="mlbl">plan-save rate</div></div></div></div></div>
+            <div class="pcard featured"><div class="ptop"><div class="brow"><span class="b b-co">Adform &middot; 2025&ndash;26</span><span class="b b-wip">In progress</span></div><div class="ptitle">Central Orchestrator Agent</div><div class="pmeta">Multi-Agent Orchestration &middot; MCP &middot; Agentic AI</div></div><div class="pbody"><dl class="pstory"><dt>Problem</dt><dd>Every new AI capability risked becoming yet another separate tool.</dd><dt>My bet</dt><dd>One entry point: a central agent that understands intent and routes to specialist agents.</dd><dt>Built</dt><dd>An MCP-based agent framework, starting from Campaign Search &amp; Filter &mdash; Search, Reporting and Help first, then Audience and Contextual.</dd></dl><div class="chips"><span class="chip">Intent routing</span><span class="chip">Specialist sub-agents</span><span class="chip">Phased release plan</span><span class="chip">Platform architecture</span></div><div class="ledto"><strong>Led to &rarr;</strong> each new agent plugs into the same framework instead of starting from zero.</div></div></div>
     </div>
+    <div class="cat-aside reveal"><div class="bubble">I supervised every one of these from the keyboard. You&rsquo;re welcome.</div><div class="cat-ic">&#128049;</div></div>
   </div>
 </section>
 
-<section class="sec sec-alt" id="workshops">
+<section class="sec" id="ops" style="padding-top:0;">
+  <div class="con">
+    <div class="sec-lbl reveal">Leadership in practice</div>
+    <h2 class="sec-h2 reveal">How I Run AI Teams</h2>
+    <p class="sec-intro reveal">Leading Research and GenAI teams of engineers and data scientists &mdash; and using AI on how the work gets done, not just in what we ship.</p>
+    <div class="pgrid stagger">
+      <div class="pcard"><div class="ptop"><div class="brow"><span class="b b-co">Adform &middot; 2026</span><span class="b b-new">In use</span></div><div class="ptitle">AI-Native Capacity &amp; Roadmap Planning</div><div class="pmeta">Claude &middot; Atlassian MCP &middot; Jira Automation</div></div><div class="pbody"><dl class="pstory"><dt>Problem</dt><dd>Capacity, holidays and roadmap commitments lived in different sheets and tools &mdash; and time was logged by hand.</dd><dt>My bet</dt><dd>AI connected to Jira and Confluence could give everyone one live view, with no extra licences.</dd><dt>Built</dt><dd>Live planning boards for the Research and GenAI teams, with a capacity model that reserves time for support, maintenance, audits and POCs.</dd></dl><div class="chips"><span class="chip">Capacity model</span><span class="chip">Protected exploration time</span><span class="chip">Auto time-logging</span><span class="chip">Cost-aware tooling</span></div><div class="ledto"><strong>Led to &rarr;</strong> automated time logging from story points at sprint close &mdash; better estimates, no timesheets.</div></div></div>
+      <div class="pcard"><div class="ptop"><div class="brow"><span class="b b-co">Adform &middot; 2026</span><span class="b b-hitl">Trust &amp; compliance</span></div><div class="ptitle">TAG / MRC Audit Readiness</div><div class="pmeta">Measurement Accreditation &middot; AdTech Governance</div></div><div class="pbody"><dl class="pstory"><dt>Problem</dt><dd>Recurring audit work kept competing with delivery.</dd><dt>My bet</dt><dd>Plan compliance like product work, not as a fire drill.</dd><dt>Built</dt><dd>TAG recertification walkthroughs, evidence and structured cheat-sheets that answer auditor questions before they&rsquo;re asked &mdash; with audit time reserved across the year.</dd></dl><div class="chips"><span class="chip">Audit walkthroughs</span><span class="chip">Evidence preparation</span><span class="chip">Audit automation</span></div><div class="ledto"><strong>Next &rarr;</strong> an AI agent to streamline future TAG/MRC audit cycles, and automated monthly and quarterly audit tasks.</div></div></div>
+    </div>
+    <div class="cat-aside reveal"><div class="bubble">Automated timesheets. More time for naps. Everybody wins.</div><div class="cat-ic">&#128049;</div></div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="how">
+  <div class="con">
+    <div class="sec-lbl reveal">A second opinion</div>
+    <h2 class="sec-h2 reveal">How I work &mdash; according to my AI companions.</h2>
+    <p class="sec-intro reveal">I work with two AI assistants every day &mdash; Claude for strategy, scoping and building, and Rovo inside Adform&rsquo;s Jira and Confluence for audits, investigations and team workflows. I asked both what they&rsquo;ve noticed about how I work.</p>
+    <div class="duo stagger">
+      <div class="duo-col"><div class="duo-head"><div class="cl-badge"><i></i>Claude says</div><span class="ctx">strategy, scoping &amp; building</span></div><div class="duo-item"><h3>&ldquo;She builds things that get reused.&rdquo;</h3><p>Interview-analysis models became AI proctoring. A campaign search agent became the base of an agent platform. Counsellor corrections became training data. Almost nothing she builds stays a one-off.</p></div><div class="duo-item"><h3>&ldquo;A director who still builds.&rdquo;</h3><p>When her teams needed better planning, she didn&rsquo;t write a request &mdash; she built live boards herself and automated the time logging nobody enjoyed.</p></div><div class="duo-item"><h3>&ldquo;Simple beats clever.&rdquo;</h3><p>She drops process nobody will maintain, avoids tools that need extra licences or credits, and ships in phases.</p></div><div class="duo-item"><h3>&ldquo;She designs for the person without access.&rdquo;</h3><p>Her first question about any tool is whether everyone can use it &mdash; colleagues without AI access, planners without a technical background.</p></div></div>
+      <div class="duo-col"><div class="duo-head"><div class="cl-badge rovo"><i></i>Rovo says</div><span class="ctx">audits, investigations &amp; team workflows</span></div><div class="duo-item"><h3>&ldquo;A forensic truth-seeker.&rdquo;</h3><p>She never takes a claim at face value. She wants the underlying query, the record, and who verified what &mdash; and spots the discrepancy others overlook.</p></div><div class="duo-item"><h3>&ldquo;A principled guardian.&rdquo;</h3><p>She carries Adform&rsquo;s credibility with auditors and clients seriously, and is precise about where technical facts end and commercial commitments begin.</p></div><div class="duo-item"><h3>&ldquo;Cut to the chase.&rdquo;</h3><p>No patience for fluff or over-engineering. When things get tangled, she asks for a clean table and row-by-row actions.</p></div><div class="duo-item"><h3>&ldquo;A dependable anchor.&rdquo;</h3><p>Generous with credit, protective of her team&rsquo;s bandwidth &mdash; the safe pair of hands people trust to get the facts right.</p></div></div>
+    </div>
+    <div class="agree reveal"><div class="ag-lbl">Where they agree</div><p>Two assistants, different tools, same conclusion: she automates the toil so nobody repeats manual work, and keeps things simple enough that the whole team can use them.</p></div>
+    <div class="growing-note reveal"><strong>Still growing &mdash; scaling beyond one.</strong> After years of zero-to-one, my current stretch is building teams and systems that do great work without me in every room. It&rsquo;s a very different skill, and I love it.</div>
+
+    <div class="guide reveal">
+      <h3>Working with me &mdash; a short user guide</h3>
+      <ol>
+        <li><strong>I scope in phases.</strong>I&rsquo;d rather ship release 1 well than plan release 3 perfectly.</li>
+        <li><strong>I align the room fast.</strong>A couple of focused stakeholder calls, not a month of meetings.</li>
+        <li><strong>I automate the toil first.</strong>If someone does it every sprint by hand, a machine should be doing it.</li>
+        <li><strong>I make things self-serve.</strong>If a colleague needs me to see the data, the tool isn&rsquo;t finished.</li>
+        <li><strong>I want the evidence.</strong>Show me the query, the record and who verified it. Claims without provenance don&rsquo;t ship.</li>
+        <li><strong>I make hard tech feel human.</strong>Plain language, mapped user flows, and B2C-grade UX even in B2B.</li>
+      </ol>
+      <div class="cl-sign">Written with Claude, drawing on what Claude and Rovo said about our work together &middot; reviewed and approved by me.</div>
+    </div>
+
+    <div class="built reveal">
+      <h3>Built with AI, not just about AI</h3>
+      <p>I use the technology I strategise about. A few things I&rsquo;ve built with Claude and Rovo:</p>
+      <div class="built-grid">
+        <div class="btile"><div class="bt-ic">&#127912;</div><div class="bt-t">This portfolio</div><div class="bt-d">Designed, written and iterated with Claude &mdash; including the section you&rsquo;re reading.</div></div>
+        <div class="btile"><div class="bt-ic">&#128202;</div><div class="bt-t">Team planning boards</div><div class="bt-d">Live capacity and roadmap views built with Claude, connected to Jira and Confluence.</div></div>
+        <div class="btile"><div class="bt-ic">&#128203;</div><div class="bt-t">Audit preparation</div><div class="bt-d">Rovo inside Adform&rsquo;s Atlassian as a research partner for TAG/MRC walkthroughs, evidence and auditor cheat-sheets.</div></div>
+      </div>
+    </div>
+    <div class="cat-aside reveal"><div class="bubble">Two AI opinions. Zero cat opinions. Noted.</div><div class="cat-ic">&#128049;</div></div>
+  </div>
+</section>
+
+<section class="sec" id="workshops">
   <div class="con">
     <div class="sec-lbl reveal">Facilitation</div>
     <h2 class="sec-h2 reveal">Workshops &amp; Talks</h2>
@@ -685,7 +793,7 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
   </div>
 </section>
 
-<section class="sec" id="writing">
+<section class="sec sec-alt" id="writing">
   <div class="con">
     <div class="sec-lbl reveal">Thought Leadership</div>
     <h2 class="sec-h2 reveal">Writing &amp; LinkedIn</h2>
@@ -700,7 +808,7 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
   </div>
 </section>
 
-<section class="sec sec-alt" id="education">
+<section class="sec" id="education">
   <div class="con">
     <div class="sec-lbl reveal">Credentials</div>
     <h2 class="sec-h2 reveal">Education &amp; Training</h2>
@@ -708,7 +816,7 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
     <div class="edf reveal">
       <div class="eicon">&#127963;</div>
       <div style="flex:1;">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;"><span class="ebadge ebadge-f">Leadership Programme</span><span class="ebadge">Jan&ndash;Jun 2026</span></div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;"><span class="ebadge ebadge-f">Leadership Programme</span><span class="ebadge">Jan&ndash;Jun 2024</span><span class="ebadge">Graduated</span></div>
         <div class="edeg">Leadership Fundamentals Programme</div>
         <div class="esch">Adform &middot; Vilnius (in-person) &amp; Online</div>
         <p style="font-size:13px;color:var(--text-2);line-height:1.8;margin-bottom:1rem;">A 6-month structured leadership development journey combining in-person workshops in Vilnius with online follow-ups, self-learning, and senior leader experience sharing.</p>
@@ -734,13 +842,14 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
     <h2 class="sec-h2 reveal">Skills &amp; Tools</h2>
     <p class="sec-intro reveal">Spanning product strategy, AI engineering vocabulary, analytics, and the full suite of tools that make distributed teams work.</p>
     <div class="sgrid stagger">
-      <div class="sgrp"><div class="sgrptit">Leadership</div><div class="spills"><span class="spill hl">C-Level Communication</span><span class="spill hl">Zero-to-One Scaling</span><span class="spill hl">Cross-Functional Leadership</span><span class="spill hl">Agile Leadership</span><span class="spill">Distributed Team Management</span><span class="spill">Workshop Facilitation</span></div></div>
-      <div class="sgrp"><div class="sgrptit">AI &amp; Technical</div><div class="spills"><span class="spill hl">Generative AI Strategy</span><span class="spill hl">LLMs &amp; RAG</span><span class="spill hl">Model Context Protocol</span><span class="spill">Computer Vision</span><span class="spill">API Design (REST)</span><span class="spill">SDLC</span></div></div>
-      <div class="sgrp"><div class="sgrptit">Product Strategy</div><div class="spills"><span class="spill hl">Complex Workflow Design</span><span class="spill hl">UX Strategy</span><span class="spill">Edge Case Analysis</span><span class="spill">Multi-Industry Adaptability</span><span class="spill">Go-to-Market</span></div></div>
+      <div class="sgrp"><div class="sgrptit">Leadership</div><div class="spills"><span class="spill hl">C-Level Communication</span><span class="spill hl">Zero-to-One Scaling</span><span class="spill hl">Cross-Functional Leadership</span><span class="spill hl">Agile Leadership</span><span class="spill">Distributed Team Management</span><span class="spill">Capacity Planning</span><span class="spill">Workshop Facilitation</span></div></div>
+      <div class="sgrp"><div class="sgrptit">AI &amp; Technical</div><div class="spills"><span class="spill hl">Generative AI Strategy</span><span class="spill hl">LLMs &amp; RAG</span><span class="spill hl">Model Context Protocol</span><span class="spill hl">Multi-Agent Orchestration</span><span class="spill">Computer Vision</span><span class="spill">API Design (REST)</span><span class="spill">SDLC</span></div></div>
+      <div class="sgrp"><div class="sgrptit">Product Strategy</div><div class="spills"><span class="spill hl">Complex Workflow Design</span><span class="spill hl">UX Strategy</span><span class="spill">Edge Case Analysis</span><span class="spill">Multi-Industry Adaptability</span><span class="spill">Go-to-Market</span><span class="spill">Compliance &amp; Audit (TAG/MRC)</span></div></div>
       <div class="sgrp"><div class="sgrptit">Prototyping</div><div class="spills"><span class="spill">Figma</span><span class="spill">Balsamiq</span><span class="spill">Whimsical</span><span class="spill">Excalidraw</span><span class="spill">Draw.io</span></div></div>
       <div class="sgrp"><div class="sgrptit">Analytics</div><div class="spills"><span class="spill">Amplitude</span><span class="spill">GA4</span><span class="spill">Tableau</span><span class="spill">Looker</span><span class="spill">LogRocket</span><span class="spill">Redash</span></div></div>
-      <div class="sgrp"><div class="sgrptit">PM &amp; Collaboration</div><div class="spills"><span class="spill">Jira Advanced Roadmaps</span><span class="spill">Confluence</span><span class="spill">Asana</span><span class="spill">Slack</span><span class="spill">HubSpot</span></div></div>
+      <div class="sgrp"><div class="sgrptit">PM &amp; Collaboration</div><div class="spills"><span class="spill">Jira Advanced Roadmaps</span><span class="spill">Jira Automation</span><span class="spill">Confluence</span><span class="spill">Asana</span><span class="spill">Slack</span><span class="spill">HubSpot</span></div></div>
     </div>
+    <div class="cat-aside reveal"><div class="bubble">One skill still missing from this list: ignoring the cat. She hasn&rsquo;t mastered it.</div><div class="cat-ic">&#128049;</div></div>
   </div>
 </section>
 
@@ -770,12 +879,11 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
     <h2 class="sec-h2 reveal" style="text-align:center;margin-bottom:.5rem;">Let&rsquo;s build something together.</h2>
     <p style="font-size:15px;color:var(--text-3);margin-bottom:0;font-weight:300;text-align:center;" class="reveal">Open to product leadership roles, AI advisory, and speaking engagements.</p>
     <div class="ccards stagger">
-      <a href="https://mountainlady.github.io/parvati.ramachandran/" target="_blank" class="ccard"><div class="cicon">&#127760;</div><div><div class="clbl">Portfolio</div><div class="cval">mountainlady.github.io/github.io</div></div></a>
+      <a href="https://mountainlady.github.io/parvati.ramachandran/" target="_blank" class="ccard"><div class="cicon">&#127760;</div><div><div class="clbl">Portfolio</div><div class="cval">mountainlady.github.io/parvati.ramachandran</div></div></a>
       <button data-tally-open="eqEOEE" data-tally-width="420" data-tally-emoji-text="✉️" data-tally-emoji-animation="wave" class="ccard" style="border:none;cursor:pointer;background:var(--surface);text-align:left;font-family:'Nunito',sans-serif;"><div class="cicon">&#9993;&#65039;</div><div><div class="clbl">Email</div><div class="cval">Send me a message ↗</div></div></button>
-      <a href="tel:+917977692701" class="ccard"><div class="cicon">&#128222;</div><div><div class="clbl">Phone</div><div class="cval">+91 797 769 2701</div></div></a>
       <a href="https://www.linkedin.com/in/parvati-ramachandran/" target="_blank" class="ccard"><div class="cicon">&#128188;</div><div><div class="clbl">LinkedIn</div><div class="cval">parvati-ramachandran</div></div></a>
     </div>
-    <div style="text-align:center;" class="reveal"><div class="rbadge">&#127807; Open to relocation outside India &middot; Visa sponsorship required</div></div>
+    <div style="text-align:center;" class="reveal"><div class="rbadge">&#127807; Open to relocation outside India &middot; Happy to discuss visa sponsorship</div></div>
   </div>
 </section>
 
@@ -785,7 +893,7 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
 const FIXED_MONTHS=117;
 const adS=new Date(2023,2,1),nw=new Date();
 const adM=(nw.getFullYear()-adS.getFullYear())*12+(nw.getMonth()-adS.getMonth());
-document.getElementById('expCtr').textContent=Math.floor((FIXED_MONTHS+adM)/12)+'+';
+const _ec=document.getElementById('expCtr');if(_ec)_ec.textContent=Math.floor((FIXED_MONTHS+adM)/12)+'+';
 
 const toggle=document.getElementById('themeToggle'),thumb=document.getElementById('themeThumb'),html=document.documentElement;
 const saved=localStorage.getItem('theme')||'light';
